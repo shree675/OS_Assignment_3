@@ -5,6 +5,17 @@ void read_file(char*);
 
 void edit_file(char *file_name, int updated_marks);
 
+
+/*
+syscall::read:entry,
+syscall::write:entry
+/execname=="demo"/
+{
+	printf("execname:%s uid:%d %s:%s",execname,uid,probefunc,stringof(copyin(arg1,arg2)));
+}
+*/
+
+
 int main()
 {
         FILE *fp;
