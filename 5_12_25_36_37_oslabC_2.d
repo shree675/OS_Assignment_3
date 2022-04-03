@@ -29,16 +29,16 @@ proc:::exit
 syscall::read:entry, syscall::write:entry
 /gid==$1 && execname!="sh"/
 {
-	ts[probefunc] = timestamp;
+	timeticks[probefunc] = timestamp;
 	printf("exec:%s", execname);
 	printf("\n----------------------------------------------------\n");
 
 }
 
 syscall::read:return, syscall::write:return
-/gid == $1 && ts[probefunc] != 0 && execname!="sh"/
+/gid == $1 && timeticks[probefunc] != 0 && execname!="sh"/
 {
-	printf("%d nanoseconds", timestamp - ts[probefunc]);
+	printf("%d nanoseconds", timestamp - timeticks[probefunc]);
 	printf("\n----------------------------------------------------\n");
 }
 
