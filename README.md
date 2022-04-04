@@ -33,3 +33,9 @@ A:rw-
 ```
 $ getent group college
 ```
+
+## Team
+1. CS19B012 Debeshee
+2. CS19B025 Aashrith
+3. CS19B036 Kranthi
+4. CS19B037 Shreetesh
