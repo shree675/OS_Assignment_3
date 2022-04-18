@@ -29,7 +29,7 @@ F:---
 A:rw-
 ```
 * Open a terminal and run `./demo`.
-* In a new terminal, run `dtrace -s 5_12_25_36_37_oslabC_2.d <group_id>`, where 'group_id' is the group id of college. It can be obtained by running
+* In a new terminal, run `dtrace -s 5_12_25_36_37_oslabC_2.d <group_id>` as a root user, where 'group_id' is the group id of `college`. It can be obtained by running
 ```
 $ getent group college
 ```
